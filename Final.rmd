@@ -22,19 +22,98 @@ mutate(across(where(is.character), as.factor))
 
 # Introduction
 
-A new  preventative vaccine (covid921) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
+A new  preventative vaccine (Covid-19) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of sub populations tracked. Consider population subgroups by gender(males and females), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbiage when referencing p-values in conclusions.
 
 ## Males
+### Introduction
+
+### Methods
+
+### Results
+Chunk?
+#### Descriptive Results
+
+##### Graphical Results
+Chunk + description
+
+##### Numerical Results
+Chunk + description
+
+##### Inferential Results
+Chunk + description
+
+### Disscussion and Conclusion
+Description
+
 
 
 ## Females
+### Introduction
+
+### Methods
+
+### Results
+Chunk?
+#### Descriptive Results
+
+##### Graphical Results
+Chunk + description
+
+##### Numerical Results
+Chunk + description
+
+##### Inferential Results
+Chunk + description
+
+### Disscussion and Conclusion
+Description
+
 
 
 ## LGBTQ
+### Introduction
+
+### Methods
+
+### Results
+Chunk?
+#### Descriptive Results
+
+##### Graphical Results
+Chunk + description
+
+##### Numerical Results
+Chunk + description
+
+##### Inferential Results
+Chunk + description
+
+### Disscussion and Conclusion
+Description
 
 
 
 ## Druggies
+### Introduction
+
+### Methods
+
+### Results
+Chunk?
+#### Descriptive Results
+
+##### Graphical Results
+Chunk + description
+
+##### Numerical Results
+Chunk + description
+
+##### Inferential Results
+Chunk + description
+
+### Disscussion and Conclusion
+Description
 
 
 # Overall Results and Conclusions
+Description covering all four each separately and then all four together whether they should take the vaccine.
