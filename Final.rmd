@@ -13,11 +13,19 @@ date: "Summer 2023"
 require(tidyverse)
 require(tigerstats)
 require(forcats)
-FinalDat <-read.csv(file="final.csv",header=TRUE)
+FinalData <-read.csv(file="final.csv",header=TRUE)
 #recode to remove the annoying "X" from the dataframe
-FinalData <- FinalDat  %>% select(-one_of("X"))
+FinalData <- FinalData  %>% select(-one_of("X"))
 FinalData <- FinalData %>%
 mutate(across(where(is.character), as.factor))
+```
+
+```{r include=FALSE}
+require(tidyverse)
+require(tigerstats)
+require(knitr)
+data(FinalData)
+FinalData <- na.omit(FinalData)
 ```
 
 # Introduction
@@ -27,14 +35,28 @@ A new  preventative vaccine (Covid-19) is under test in clinical trials. Given t
 ## Males
 ### Introduction
 
+The new preventative vaccine for (Covid 19) is being used to see if the vaccine has any effect on the Males and whether it prevents the Diesease Covid-19 against those who do not take the vaccine.
+
 ### Methods
 
+The methods we are using to approach this hypothesis are the bar plots to graph the data, a Table test for numerical data for the exact numbers, and an Chi test/Fisher XY test for Inferential data. While using our CAT~CAT helper file for our variable analysis, making the Males, Females, LGBTQ, and Druggies for Categorical as well as the Vaccine for Covid also being Categorical.
+
+$H_0$ There is no difference in the effect the vaccine has on Males and does not prevent Covid-19
+
+$H_A$ There is a difference in the effect the vaccine has on Males and does prevent Covid-19.
+
 ### Results
-Chunk?
+
 #### Descriptive Results
 
 ##### Graphical Results
-Chunk + description
+
+```{r}
+barchartGC(~class + Sex,data=ucdavis1)
+barchartGC(~class + Sex,data=ucdavis1, type="percent")
+
+```
+
 
 ##### Numerical Results
 Chunk + description
