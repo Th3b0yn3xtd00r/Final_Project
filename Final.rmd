@@ -153,3 +153,59 @@ According to the Inferential results show that the Fisher exact test, we got a p
 
 According to the report on females we are asking, Is there a difference in the new preventative vaccine effects on females, whether it prevents Covid-19 against those who take the vaccine and those females who take a placebo? In the report we found that there is an insignificant difference between those females who took the vaccine and those who took the placebo to prevent Covid-19. the table shows that sixty percent of the female group who took the placebo experienced symptoms while only forty percent of the vaccinated females experienced symptoms. It is also mentioned that the female placebo group, 2.04 percent of them contracted COVID while only 1.37 percent of the vaccinated group contracted COVID. While the Fisher exact test, we got a p-value of 0.0002162, the p value is so small that we are rejecting the null hypothesis. However the the chi-square test it shows the P-value is 0.0002732, the p value is so small that we are rejecting the null hypothesis. 95 percent of the time when repeating this clinical trial we found that the difference in means of the vaccine is between 1.199509 and 1.862988.The odds ratio in this fisher test are showing females have a 1.49 percent difference between those who contracted Covid-19 with the vaccine and with the placebo.
 
+## LGBTQ
+
+### Introduction
+
+The new preventative vaccine for (Covid 19) is being used to see if the vaccine has any effect on the LGBTQ and whether it prevents Covid-19, against the LGBTQ who do not take the vaccine. Is there a difference in the new preventative vaccine effects on LGBTQ, whether it prevents Covid-19 against those who take the vaccine and those LGBTQ who take a placebo?
+
+$H_0$ There is no difference in the effect the vaccine has on LGBTQ and does not prevent Covid-19
+
+$H_A$ There is a difference in the effect the vaccine has on LGBTQ and does prevent Covid-19.
+
+### Methods
+
+The Methods we are using to approach this hypothesis or clinical test are the bar plots to graph the data, a Table test for numerical data for the results in number form to show the data, and an Chi test/Fisher XY test for Inferential data to show the difference or ratio between the data. While using our CAT~CAT helper file for our variable analysis, making the LGBTQ for Categorical as well as the Vaccine for Covid-19 also being Categorical.
+
+### Results
+
+```{r}
+LGBTQData = filter (FinalData,LGBTQ == "gay")
+```
+
+#### Descriptive Results
+
+##### Graphical Descriptive
+
+```{r}
+barchartGC(~infected+treatment,data=LGBTQData)
+barchartGC(~infected+treatment,data=LGBTQData, type="percent")
+
+```
+
+According to the Graphical results it shows that the group of LGBTQ who contracted COVID and the LGBTQ who received the placebo had less symptoms than those that received the vaccine, while the all LGBTQ group that didn't contract COVID showed an insignificant difference between those who were vaccinated and took the placebo.
+
+##### Numerical Descriptive
+
+```{r}
+table3 <- xtabs(~infected + treatment, data=LGBTQData)
+rowPerc(table3)
+colPerc(table3)
+```
+
+According to the Numerical results the table shows that 15.38 percent of the LGBTQ group who took the placebo experienced symptoms while only 84.62 percent of the vaccinated LGBTQ experienced symptoms. It is also mentioned that the LGBTQ placebo group, 0.66 percent of them contracted COVID while only 3.54 percent of the vaccinated group contracted COVID. There is an insignificant difference between those LGBTQ who took the vaccine and those who took the placebo to prevent Covid-19.
+
+##### Inferential Results
+
+```{r}
+chisq.test(table3)
+chisqtestGC(table3)
+fisher.test(table3)
+```
+
+According to the Inferential results show that the Fisher exact test, we got a p-value of 0.00000001029, the p value is so small that we are accepting the null hypothesis. Showing that the vaccine is  not effective between the LGBTQ subgroup. For the chi-square test it shows the P-value is 0.00000006668, the p value is so small that we are rejecting the null hypothesis. 95 percent of the time when repeating this clinical trial we found that the difference in means of the vaccine is between 0.08229236 and 0.36180711.The odds ratio in this fisher test are showing LGBTQ have a 0.18 percent difference between those who contracted Covid-19 with the vaccine and with the placebo.
+
+##### Disscussion and Conclusion
+
+According to the report on LGBTQ we are asking, Is there a difference in the new preventative vaccine effects on LGBTQ, whether it prevents Covid-19 against those who take the vaccine and those LGBTQ who take a placebo? In the report we found that there is an insignificant difference between those LGBTQ who took the vaccine and those who took the placebo to prevent Covid-19. the table shows that 15.38 percent of the LGBTQ group who took the placebo experienced symptoms while only 84.62 percent of the vaccinated LGBTQ experienced symptoms. It is also mentioned that the LGBTQ placebo group, 0.66 percent of them contracted COVID while only 3.54 percent of the vaccinated group contracted COVID. While the Fisher exact test, we got a p-value of 0.00000001029, the p value is so small that we are rejecting the null hypothesis. However the the chi-square test it shows the P-value is 0.00000006668, the p value is so small that we are accepting the null hypothesis. 95 percent of the time when repeating this clinical trial we found that the difference in means of the vaccine is between 0.08229236 and 0.36180711.The odds ratio in this fisher test are showing LGBTQ have a 0.18 percent difference between those who contracted Covid-19 with the vaccine and with the placebo.
+
