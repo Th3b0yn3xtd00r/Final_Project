@@ -46,15 +46,15 @@ The Methods we are using to approach this hypothesis or clinical test are the ba
 
 ### Introduction
 
-The new preventative vaccine for (Covid 19) is being used to see if the vaccine has any effect on the Males and whether it prevents Covid-19, against the males who do not take the vaccine. Is there a difference in the new preventative vaccine effects on males, whether it prevents Covid-19 against those who take the vaccine don't take a placebo?
-
-### Methods
-
-The Methods we are using to approach this hypothesis or clinical test are the bar plots to graph the data, a Table test for numerical data for the results in number form to show the data, and an Chi test/Fisher XY test for Inferential data to show the difference or ratio between the data. While using our CAT~CAT helper file for our variable analysis, making the Males for Categorical as well as the Vaccine for Covid-19 also being Categorical.
+The new preventative vaccine for (Covid 19) is being used to see if the vaccine has any effect on the Males and whether it prevents Covid-19, against the males who do not take the vaccine. Is there a difference in the new preventative vaccine effects on males, whether it prevents Covid-19 against those who take the vaccine and those males who take a placebo?
 
 $H_0$ There is no difference in the effect the vaccine has on Males and does not prevent Covid-19
 
 $H_A$ There is a difference in the effect the vaccine has on Males and does prevent Covid-19.
+
+### Methods
+
+The Methods we are using to approach this hypothesis or clinical test are the bar plots to graph the data, a Table test for numerical data for the results in number form to show the data, and an Chi test/Fisher XY test for Inferential data to show the difference or ratio between the data. While using our CAT~CAT helper file for our variable analysis, making the Males for Categorical as well as the Vaccine for Covid-19 also being Categorical.
 
 ### Results
 
@@ -72,7 +72,7 @@ barchartGC(~infected+treatment,data=maleData, type="percent")
 
 ```
 
-According to the Graphical results it shows that the group of males who contracted COVID and the males who received the vaccine had less symptoms than those that received the placebo, while the all male group that didn't contract COVID showed no difference between those who were vaccinated and took the placebo.
+According to the Graphical results it shows that the group of males who contracted COVID and the males who received the vaccine had less symptoms than those that received the placebo, while the all male group that didn't contract COVID showed a signifigant difference between those who were vaccinated and took the placebo.
 
 ##### Numerical Descriptive
 
@@ -82,7 +82,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-According to the Numerical results the table shows that 69.57% of the male group who took the placebo experienced symptoms while only 30.43% of the vaccinated males experienced symptoms. It is also mentioned that the male placebo group, 2.55% of them contracted COVID while only 1.15% of the vaccinated group contracted COVID. There is signifigant difference between those males who took the vaccine and those who took the placebo to prevent Covid-19.
+According to the Numerical results the table shows that 69.57 percent of the male group who took the placebo experienced symptoms while only 30.43 percent of the vaccinated males experienced symptoms. It is also mentioned that the male placebo group, 2.55 percent of them contracted COVID while only 1.15 percent of the vaccinated group contracted COVID. There is significant difference between those males who took the vaccine and those who took the placebo to prevent Covid-19.
 
 ##### Inferential Results
 
@@ -92,10 +92,64 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-According to the Inferential results show that the Fisher exact test, we got a p-value of 0.00000000000004631, the p value is so small that we are rejecting the null hypothesis. Showing that the vaccine is effective between the male subgroup. For the chi-square test it shows the P-value is 0.0000000000001098, the p value is so small that we are rejecting the null hypothesis. 95 percent of the time when repeating this clinical trial we found that the difference in means of the Vitamin C content within the cabbages is between 1.798068 and 2.810778.The odds ratio in this fisher test are showing males have a 2.24 percent difference between those who contracted Covid-19 with the vaccine and with the placebo.
+According to the Inferential results show that the Fisher exact test, we got a p-value of 0.00000000000004631, the p value is so small that we are rejecting the null hypothesis. Showing that the vaccine is effective between the male subgroup. For the chi-square test it shows the P-value is 0.0000000000001098, the p value is so small that we are rejecting the null hypothesis. 95 percent of the time when repeating this clinical trial we found that the difference in means of the vaccine is between 1.798068 and 2.810778.The odds ratio in this fisher test are showing males have a 2.24 percent difference between those who contracted Covid-19 with the vaccine and with the placebo.
 
 ##### Disscussion and Conclusion
 
-According to the report on males we are asking, Is there a difference in the new preventative vaccine effects on males, whether it prevents Covid-19 against those who take the vaccine don't take a placebo? In the report we found that there is significant difference between those males who took the vaccine and those who took the placebo to prevent Covid-19. the table showed how 69.57% of the male group who took the placebo experienced symptoms while only 30.43% of the vaccinated males experienced symptoms. It also mentioned that the male placebo group, 2.55% of them contracted COVID while only 1.15% of the vaccinated group contracted COVID. While the Fisher exact test, we got a p-value of 0.00000000000004631, the p value is so small that we are rejecting the null hypothesis. However the the chi-square test it shows the P-value is 0.0000000000001098, the p value is so small that we are rejecting the null hypothesis. 95 percent of the time when repeating this clinical trial we found that the difference in means of the Vitamin C content within the cabbages is between 1.798068 and 2.810778.The odds ratio in this fisher test are showing males have a 2.24 percent difference between those who contracted Covid-19 with the vaccine and with the placebo.
+According to the report on males we are asking, Is there a difference in the new preventative vaccine effects on males, whether it prevents Covid-19 against those who take the vaccine and those males who take a placebo? In the report we found that there is significant difference between those males who took the vaccine and those who took the placebo to prevent Covid-19. the table showed how 69.57 percent of the male group who took the placebo experienced symptoms while only 30.43 percent of the vaccinated males experienced symptoms. It also mentioned that the male placebo group, 2.55 percent of them contracted COVID while only 1.15 percent of the vaccinated group contracted COVID. While the Fisher exact test, we got a p-value of 0.00000000000004631, the p value is so small that we are rejecting the null hypothesis. However the the chi-square test it shows the P-value is 0.0000000000001098, the p value is so small that we are rejecting the null hypothesis. 95 percent of the time when repeating this clinical trial we found that the difference in means of the vaccine is between 1.798068 and 2.810778.The odds ratio in this fisher test are showing males have a 2.24 percent difference between those who contracted Covid-19 with the vaccine and with the placebo.
 
-##
+## Females
+
+### Introduction
+
+The new preventative vaccine for (Covid 19) is being used to see if the vaccine has any effect on the Females and whether it prevents Covid-19, against the females who do not take the vaccine. Is there a difference in the new preventative vaccine effects on females, whether it prevents Covid-19 against those who take the vaccine and those females who take a placebo?
+
+$H_0$ There is no difference in the effect the vaccine has on Females and does not prevent Covid-19
+
+$H_A$ There is a difference in the effect the vaccine has on Females and does prevent Covid-19.
+
+### Methods
+
+The Methods we are using to approach this hypothesis or clinical test are the bar plots to graph the data, a Table test for numerical data for the results in number form to show the data, and an Chi test/Fisher XY test for Inferential data to show the difference or ratio between the data. While using our CAT~CAT helper file for our variable analysis, making the Females for Categorical as well as the Vaccine for Covid-19 also being Categorical.
+
+### Results
+
+```{r}
+femaleData = filter (FinalData,sex == "F")
+```
+
+#### Descriptive Results
+
+##### Graphical Descriptive
+
+```{r}
+barchartGC(~infected+treatment,data=femaleData)
+barchartGC(~infected+treatment,data=femaleData, type="percent")
+```
+
+According to the Graphical results it shows that the group of females who contracted COVID and the females who received the vaccine had less symptoms than those that received the placebo, while the all female group that didn't contract COVID showed an insignificant difference between those who were vaccinated and took the placebo.
+
+##### Numerical Descriptive
+
+```{r}
+table2 <- xtabs(~infected + treatment, data=femaleData)
+rowPerc(table2)
+colPerc(table2)
+```
+
+According to the Numerical results the table shows that sixty percent of the female group who took the placebo experienced symptoms while only forty percent of the vaccinated females experienced symptoms. It is also mentioned that the female placebo group, 2.04 percent of them contracted COVID while only 1.37 percent of the vaccinated group contracted COVID. There is an insignificant difference between those females who took the vaccine and those who took the placebo to prevent Covid-19.
+
+##### Inferential Results
+
+```{r}
+chisq.test(table2)
+chisqtestGC(table2)
+fisher.test(table2)
+```
+
+According to the Inferential results show that the Fisher exact test, we got a p-value of 0.0002162, the p value is so small that we are rejecting the null hypothesis. Showing that the vaccine is effective between the female subgroup. For the chi-square test it shows the P-value is 0.0002732, the p value is so small that we are rejecting the null hypothesis. 95 percent of the time when repeating this clinical trial we found that the difference in means of the vaccine is between 1.199509 and 1.862988.The odds ratio in this fisher test are showing females have a 1.49 percent difference between those who contracted Covid-19 with the vaccine and with the placebo.
+
+##### Disscussion and Conclusion
+
+According to the report on females we are asking, Is there a difference in the new preventative vaccine effects on females, whether it prevents Covid-19 against those who take the vaccine and those females who take a placebo? In the report we found that there is an insignificant difference between those females who took the vaccine and those who took the placebo to prevent Covid-19. the table shows that sixty percent of the female group who took the placebo experienced symptoms while only forty percent of the vaccinated females experienced symptoms. It is also mentioned that the female placebo group, 2.04 percent of them contracted COVID while only 1.37 percent of the vaccinated group contracted COVID. While the Fisher exact test, we got a p-value of 0.0002162, the p value is so small that we are rejecting the null hypothesis. However the the chi-square test it shows the P-value is 0.0002732, the p value is so small that we are rejecting the null hypothesis. 95 percent of the time when repeating this clinical trial we found that the difference in means of the vaccine is between 1.199509 and 1.862988.The odds ratio in this fisher test are showing females have a 1.49 percent difference between those who contracted Covid-19 with the vaccine and with the placebo.
+
