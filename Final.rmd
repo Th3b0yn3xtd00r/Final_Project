@@ -32,14 +32,25 @@ FinalData <- na.omit(FinalData)
 
 A new  preventative vaccine (Covid-19) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of sub populations tracked. Consider population subgroups by gender(males and females), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbiage when referencing p-values in conclusions.
 
+The new preventative vaccine for (Covid 19) is being used to see if the vaccine has any effect on the subgroups (Males, Females, LGBTQ, and Druggies) and whether it prevents the Diesease, Covid-19, against those who do not take the vaccine.
+
+$H_0$ There is no difference in the effect the vaccine has on the subgroups (Males, Females, LGBTQ, and Druggies) and does not prevent Covid-19
+
+$H_A$ There is a difference in the effect the vaccine has on the subgroups (Males, Females, LGBTQ, and Druggies) and does prevent Covid-19
+
+# Methods
+
+The Methods we are using to approach this hypothesis or clinical test are the bar charts to graph the data, a Table test for numerical data for the results in number form to show the data, and an Chi test/Fisher XY test for Inferential data to show the difference or ratio between the data. While using our CAT~CAT helper file for our variable analysis, making the Males, Females, LGBTQ, and Druggies for Categorical as well as the Vaccine for Covid-19 also being Categorical.
+
 ## Males
+
 ### Introduction
 
-The new preventative vaccine for (Covid 19) is being used to see if the vaccine has any effect on the Males and whether it prevents the Diesease Covid-19 against those who do not take the vaccine.
+The new preventative vaccine for (Covid 19) is being used to see if the vaccine has any effect on the Males and whether it prevents Covid-19, against the males who do not take the vaccine. Is there a difference in the new preventative vaccine effects on males, whether it prevents Covid-19 against those who take the vaccine don't take a placebo?
 
 ### Methods
 
-The methods we are using to approach this hypothesis are the bar plots to graph the data, a Table test for numerical data for the exact numbers, and an Chi test/Fisher XY test for Inferential data. While using our CAT~CAT helper file for our variable analysis, making the Males, Females, LGBTQ, and Druggies for Categorical as well as the Vaccine for Covid also being Categorical.
+The Methods we are using to approach this hypothesis or clinical test are the bar plots to graph the data, a Table test for numerical data for the results in number form to show the data, and an Chi test/Fisher XY test for Inferential data to show the difference or ratio between the data. While using our CAT~CAT helper file for our variable analysis, making the Males for Categorical as well as the Vaccine for Covid-19 also being Categorical.
 
 $H_0$ There is no difference in the effect the vaccine has on Males and does not prevent Covid-19
 
@@ -47,95 +58,44 @@ $H_A$ There is a difference in the effect the vaccine has on Males and does prev
 
 ### Results
 
+```{r}
+maleData = filter (FinalData,sex == "M")
+```
+
 #### Descriptive Results
 
-##### Graphical Results
+##### Graphical Descriptive
 
 ```{r}
-barchartGC(~class + Sex,data=ucdavis1)
-barchartGC(~class + Sex,data=ucdavis1, type="percent")
+barchartGC(~infected+treatment,data=maleData)
+barchartGC(~infected+treatment,data=maleData, type="percent")
 
 ```
 
+According to the Graphical results it shows that the group of males who contracted COVID and the males who received the vaccine had less symptoms than those that received the placebo, while the all male group that didn't contract COVID showed no difference between those who were vaccinated and took the placebo.
 
-##### Numerical Results
-Chunk + description
+##### Numerical Descriptive
 
-##### Inferential Results
-Chunk + description
+```{r}
+table1 <- xtabs(~infected + treatment, data=maleData)
+rowPerc(table1)
+colPerc(table1)
+```
 
-### Disscussion and Conclusion
-Description
-
-
-
-## Females
-### Introduction
-
-### Methods
-
-### Results
-Chunk?
-#### Descriptive Results
-
-##### Graphical Results
-Chunk + description
-
-##### Numerical Results
-Chunk + description
+According to the Numerical results the table shows that 69.57% of the male group who took the placebo experienced symptoms while only 30.43% of the vaccinated males experienced symptoms. It is also mentioned that the male placebo group, 2.55% of them contracted COVID while only 1.15% of the vaccinated group contracted COVID. There is signifigant difference between those males who took the vaccine and those who took the placebo to prevent Covid-19.
 
 ##### Inferential Results
-Chunk + description
 
-### Disscussion and Conclusion
-Description
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
+According to the Inferential results show that the Fisher exact test, we got a p-value of 0.00000000000004631, the p value is so small that we are rejecting the null hypothesis. Showing that the vaccine is effective between the male subgroup. For the chi-square test it shows the P-value is 0.0000000000001098, the p value is so small that we are rejecting the null hypothesis. 95 percent of the time when repeating this clinical trial we found that the difference in means of the Vitamin C content within the cabbages is between 1.798068 and 2.810778.The odds ratio in this fisher test are showing males have a 2.24 percent difference between those who contracted Covid-19 with the vaccine and with the placebo.
 
+##### Disscussion and Conclusion
 
-## LGBTQ
-### Introduction
+According to the report on males we are asking, Is there a difference in the new preventative vaccine effects on males, whether it prevents Covid-19 against those who take the vaccine don't take a placebo? In the report we found that there is significant difference between those males who took the vaccine and those who took the placebo to prevent Covid-19. the table showed how 69.57% of the male group who took the placebo experienced symptoms while only 30.43% of the vaccinated males experienced symptoms. It also mentioned that the male placebo group, 2.55% of them contracted COVID while only 1.15% of the vaccinated group contracted COVID. While the Fisher exact test, we got a p-value of 0.00000000000004631, the p value is so small that we are rejecting the null hypothesis. However the the chi-square test it shows the P-value is 0.0000000000001098, the p value is so small that we are rejecting the null hypothesis. 95 percent of the time when repeating this clinical trial we found that the difference in means of the Vitamin C content within the cabbages is between 1.798068 and 2.810778.The odds ratio in this fisher test are showing males have a 2.24 percent difference between those who contracted Covid-19 with the vaccine and with the placebo.
 
-### Methods
-
-### Results
-Chunk?
-#### Descriptive Results
-
-##### Graphical Results
-Chunk + description
-
-##### Numerical Results
-Chunk + description
-
-##### Inferential Results
-Chunk + description
-
-### Disscussion and Conclusion
-Description
-
-
-
-## Druggies
-### Introduction
-
-### Methods
-
-### Results
-Chunk?
-#### Descriptive Results
-
-##### Graphical Results
-Chunk + description
-
-##### Numerical Results
-Chunk + description
-
-##### Inferential Results
-Chunk + description
-
-### Disscussion and Conclusion
-Description
-
-
-# Overall Results and Conclusions
-Description covering all four each separately and then all four together whether they should take the vaccine.
+##
